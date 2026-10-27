@@ -5,6 +5,15 @@ const deviceFields = {
   deviceType: z.string().trim().min(1).max(80),
   ipAddress: z.union([z.ipv4(), z.ipv6()]),
   status: z.enum(["online", "offline", "maintenance"]),
+  location: z.string().trim().min(1).max(160).nullable().optional(),
+  macAddress: z
+    .string()
+    .trim()
+    .regex(/^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$/, "Invalid MAC address")
+    .transform((value) => value.toUpperCase())
+    .nullable()
+    .optional(),
+  lastPing: z.coerce.date().nullable().optional(),
 };
 
 export const createDeviceSchema = z.object(deviceFields).strict();

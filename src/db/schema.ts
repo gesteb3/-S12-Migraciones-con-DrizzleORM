@@ -6,6 +6,9 @@ export const devices = pgTable("devices", {
   deviceType: text("device_type").notNull(),
   ipAddress: text("ip_address").notNull(),
   status: text("status").notNull(),
+  location: text("location"),
+  macAddress: text("mac_address"),
+  lastPing: timestamp("last_ping", { withTimezone: true }),
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
