@@ -1,0 +1,35 @@
+{
+  "name": "hardware-iot-inventory-api",
+  "version": "1.0.0",
+  "description": "API RESTful para la gestión de inventario de hardware y sensores IoT",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "postgresql",
+    "drizzle-orm"
+  ],
+  "author": "Gustavo Adolfo Esteban Batres - 2890 23 25557",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "drizzle-orm": "^0.45.4",
+    "express": "^5.3.0",
+    "postgres": "^3.4.9",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "drizzle-kit": "^0.31.11",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
