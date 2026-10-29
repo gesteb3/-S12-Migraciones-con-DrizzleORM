@@ -2,12 +2,6 @@
 
 API HTTP RESTful para administrar dispositivos de hardware y sensores IoT mediante el recurso `devices`.
 
-## Datos del estudiante
-
-- **Nombre:** Gustavo Adolfo Esteban Batres
-- **Carné:** 2890 23 25557
-- **Repositorio:** [github.com/gesteb3/-S12-Migraciones-con-DrizzleORM](https://github.com/gesteb3/-S12-Migraciones-con-DrizzleORM)
-
 ## Tecnologías
 
 - Node.js, TypeScript y Express
